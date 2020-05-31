@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Choose>
+    <When Condition="'$(Platform)' == 'x64'">
+      <ItemGroup>
+        <Content Include="$(SolutionDir)AudioIdentification.ACRCloud\libs-vs2017\win64\libacrcloud_extr_tool.dll">
+          <Link>libacrcloud_extr_tool.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Content Include="$(SolutionDir)AudioIdentification.ACRCloud\libs-vs2017\win32\libacrcloud_extr_tool.dll">
+          <Link>libacrcloud_extr_tool.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>
