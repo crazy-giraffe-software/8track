@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Choose>
+    <When Condition="'$(Platform)' == 'x64'">
+      <ItemGroup>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-64\gnsdk_dsp.dll">
+          <Link>gnsdk_dsp.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-64\gnsdk_link.dll">
+          <Link>gnsdk_link.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-64\gnsdk_lookup_local.dll">
+          <Link>gnsdk_lookup_local.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-64\gnsdk_lookup_localstream.dll">
+          <Link>gnsdk_lookup_localstream.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-64\gnsdk_manager.dll">
+          <Link>gnsdk_manager.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-64\gnsdk_moodgrid.dll">
+          <Link>gnsdk_moodgrid.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-64\gnsdk_musicid.dll">
+          <Link>gnsdk_musicid.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-64\gnsdk_musicid_stream.dll">
+          <Link>gnsdk_musicid_stream.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-64\gnsdk_playlist.dll">
+          <Link>gnsdk_playlist.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-64\gnsdk_storage_sqlite.dll">
+          <Link>gnsdk_storage_sqlite.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-32\gnsdk_dsp.dll">
+          <Link>gnsdk_dsp.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-32\gnsdk_link.dll">
+          <Link>gnsdk_link.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-32\gnsdk_lookup_local.dll">
+          <Link>gnsdk_lookup_local.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-32\gnsdk_lookup_localstream.dll">
+          <Link>gnsdk_lookup_localstream.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-32\gnsdk_manager.dll">
+          <Link>gnsdk_manager.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-32\gnsdk_moodgrid.dll">
+          <Link>gnsdk_moodgrid.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-32\gnsdk_musicid.dll">
+          <Link>gnsdk_musicid.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-32\gnsdk_musicid_stream.dll">
+          <Link>gnsdk_musicid_stream.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-32\gnsdk_playlist.dll">
+          <Link>gnsdk_playlist.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="$(SolutionDir)AudioIdentification.Gracenote\gnsdk\lib\uwp_x86-32\gnsdk_storage_sqlite.dll">
+          <Link>gnsdk_storage_sqlite.dll</Link>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>

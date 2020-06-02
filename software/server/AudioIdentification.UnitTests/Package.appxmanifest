@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (c) CrazyGiraffeSoftware.net. All rights reserved.  -->
+<!--  Licensed under the MIT license. See LICENSE file in the project root for full license information.  -->
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+  <Identity Name="59c69dc2-e42a-48cb-9c27-1e98fe72142d"
+            Publisher="CN=CrazyGiraffeSoftware.net"
+            Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="59c69dc2-e42a-48cb-9c27-1e98fe72142d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>CrazyGiraffe.AudioIdentification.UnitTests</DisplayName>
+    <PublisherDisplayName>CrazyGiraffeSoftware.net</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="vstest.executionengine.universal.App"
+        Executable="$targetnametoken$.exe"
+        EntryPoint="CrazyGiraffe.AudioIdentification.UnitTests.App">
+      <uap:VisualElements
+        DisplayName="CrazyGiraffe.AudioIdentification.UnitTests"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="CrazyGiraffe.AudioIdentification.UnitTests"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+    <Capability Name="privateNetworkClientServer" />
+  </Capabilities>
+</Package>

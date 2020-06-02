@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+  "settings": {
+    "namingRules": {
+      "allowCommonHungarianPrefixes": false
+    },
+    "maintainabilityRules": {
+      "topLevelTypes": [
+        "class",
+        "interface",
+        "enum"
+      ]
+    },
+    "documentationRules": {
+      "companyName": "CrazyGiraffeSoftware.net",
+      "copyrightText": "Copyright (c) {companyName}. All rights reserved.\r\n{licenseDescription}",
+      "variables": {
+        "licenseDescription": "Licensed under the MIT license. See LICENSE file in the project root for full license information."
+      }
+    }
+  }
+}
