@@ -7,10 +7,13 @@
 [Aa][Cc][Rr][Cc]loud[Cc]lientId.xml
 **/libs-vs2017/*
 
-## Gracenote
+# Gracenote
 [Gg]racenote[Cc]lient[Ii]d.xml
 [Gg]racenote[Ll]icense.txt
 **/gnsdk/*
+
+# AcoustID
+[Aa]coust[Ii][Dd][Cc]lient[Ii]d.xml
 
 # C++ Filter files
 *.vcxproj.filters

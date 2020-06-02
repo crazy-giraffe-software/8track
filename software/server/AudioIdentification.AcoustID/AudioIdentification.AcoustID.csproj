@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (c) CrazyGiraffeSoftware.net. All rights reserved.  -->
+<!--  Licensed under the MIT license. See LICENSE file in the project root for full license information.  -->
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(SolutionDir)8Track.CSharp.Config.props" />
+  <PropertyGroup>
+    <ProjectGuid>{FFA49250-6BC4-43EC-B0A1-9C572DDA6127}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CrazyGiraffe.AudioIdentification.AcoustID</RootNamespace>
+    <AssemblyName>CrazyGiraffe.AudioIdentification.AcoustID</AssemblyName>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)8Track.CSharp.Common.props" />
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AcoustIDClient.cs" />
+    <Compile Include="AcoustIDClientIdData.cs" />
+    <Compile Include="AcoustIDSession.cs" />
+    <Compile Include="AcoustIDSessionFactory.cs" />
+    <Compile Include="AcoustIDTrackIdResponse.cs" />
+    <Compile Include="AcoustIDTrackResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\AcoustIDAudioIdentification.rd.xml" />
+  </ItemGroup>
+  <Import Project="$(SolutionDir)8Track.CSharp.Packages.props" />
+  <ItemGroup>
+    <PackageReference Include="AcoustID.NET">
+      <Version>1.3.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.Extensions">
+      <Version>4.3.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(SolutionDir)AudioIdentification\AudioIdentification.vcxproj">
+      <Project>{4472b68f-6a31-4545-942e-53e51b1c7a45}</Project>
+      <Name>AudioIdentification</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+</Project>

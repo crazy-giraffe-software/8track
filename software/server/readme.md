@@ -42,3 +42,22 @@ Then you will need to copy you project details to access ACRCloud:
 ##### SDK
 The Gracenote SDK, gnsdk, can be downloaded in three parts. The zip files should extracted to the gnsdk
 folder within the CrazyGiraffe.AudioIdentification.Gracenote project.
+
+### AcoustID
+##### Account
+To use AcoustID, you need to create an account here: [AcoustID sign-up](https://acoustid.org/)
+
+After signing up, you will need to create a application here: [Your Applications](https://acoustid.org/my-applications)
+- Save the `APIKey` of your application
+
+Then you will need to copy you project details to access AcoustID:
+- Copy `AcoustIDClientId.default.xml` to `AcoustIDClientId.xml` and enter the `APIKey` details
+
+##### SDK
+The AcoustID SDK, AcoustID.Net, is available as a [Nuget package](https://www.nuget.org/packages/AcoustID.NET/). It is already
+referenced by the CrazyGiraffe.AudioIdentification.AcoustID project.
+
+##### Known Issues
+AcoustID can identify an audio file when you have the entire file, as the web service query requires the duration
+in seconds. For my application, I need the ability to identify in real-time, which GraceNote and ACRCloud can provide.
+As such, this plugin is not fully tested.
