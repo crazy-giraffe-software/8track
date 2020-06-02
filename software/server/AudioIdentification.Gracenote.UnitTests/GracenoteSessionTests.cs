@@ -33,6 +33,18 @@ namespace CrazyGiraffe.AudioIdentification.Gracenote.UnitTests
         }
 
         /// <summary>
+        /// Test the ability to call AddAudioSample with a null array.
+        /// </summary>
+        /// <returns>A task that can be awaited.</returns>
+        [TestMethod]
+        public async Task AddAudioSampleNullSample()
+        {
+            ISession session = await CreateSessionAsync().ConfigureAwait(true);
+            Assert.IsNotNull(session, "session");
+            session.AddAudioSample(null);
+        }
+
+        /// <summary>
         /// Get the session options.
         /// </summary>
         /// <param name="audioSampleRate">Sample rate.</param>

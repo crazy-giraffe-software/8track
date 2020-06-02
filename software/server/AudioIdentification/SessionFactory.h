@@ -12,7 +12,7 @@
 namespace CrazyGiraffe { namespace AudioIdentification
 {
     /// <summary>
-    /// MusicId service interface.
+    /// AudioIdentification session interface.
     /// </summary>
     public interface class ISessionFactory
     {
@@ -27,7 +27,7 @@ namespace CrazyGiraffe { namespace AudioIdentification
     };
 
     /// <summary>
-    /// MusicId service.
+    /// AudioIdentification session factory.
     /// </summary>
     public ref class SessionFactory sealed : public  ISessionFactory
     {

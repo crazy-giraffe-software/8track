@@ -54,7 +54,7 @@ namespace CrazyGiraffe.AudioIdentification.ACRCloud.UnitTests
 
             using (TestHttpFilter filter = new TestHttpFilter())
             using (HttpResponseMessage okResponse = new HttpResponseMessage(HttpStatusCode.Ok))
-                using (HttpStringContent trackContent = new HttpStringContent(ACRCloudClientTests.GetCanonicalTrackResponse()))
+            using (HttpStringContent trackContent = new HttpStringContent(ACRCloudClientTests.GetCanonicalTrackResponse()))
             {
                 okResponse.Content = trackContent;
                 filter.Responses.Add(okResponse);
@@ -149,6 +149,18 @@ namespace CrazyGiraffe.AudioIdentification.ACRCloud.UnitTests
         }
 
         /// <summary>
+        /// Test the ability to call AddAudioSample with a null array.
+        /// </summary>
+        /// <returns>A task that can be awaited.</returns>
+        [TestMethod]
+        public async Task AddAudioSampleNullSample()
+        {
+            ISession session = await CreateSessionAsync().ConfigureAwait(true);
+            Assert.IsNotNull(session, "session");
+            session.AddAudioSample(null);
+        }
+
+        /// <summary>
         /// Create a new session using the default options.
         /// </summary>
         /// <param name="host">Host.</param>
@@ -162,14 +174,14 @@ namespace CrazyGiraffe.AudioIdentification.ACRCloud.UnitTests
             string accessSecret = "access_secret",
             IHttpFilter httpFilter = null)
         {
-            ACRCloudClientIdData cientIdData = new ACRCloudClientIdData()
+            ACRCloudClientIdData clientdata = new ACRCloudClientIdData()
             {
                 Host = host,
                 AccessKey = accessKey,
                 AccessSecret = accessSecret,
             };
 
-            ISessionFactory factory = new ACRCloudSessionFactory(cientIdData, httpFilter);
+            ISessionFactory factory = new ACRCloudSessionFactory(clientdata, httpFilter);
             Assert.IsNotNull(factory, "factory");
 
             SessionOptions options = GetSessionOptions();
