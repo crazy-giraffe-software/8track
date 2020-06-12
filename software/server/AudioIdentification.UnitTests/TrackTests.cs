@@ -7,6 +7,7 @@
 namespace CrazyGiraffe.AudioIdentification.UnitTests
 {
     using CrazyGiraffe.AudioIdentification;
+    using CrazyGiraffe.AudioIdentification.UnitTests.Mocks;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Newtonsoft.Json;
 
