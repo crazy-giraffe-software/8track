@@ -40,6 +40,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioIdentification.Graceno
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioIdentification.ScenarioTests", "AudioIdentification.ScenarioTests\AudioIdentification.ScenarioTests.csproj", "{A8568449-6B41-452A-8AB0-40EE6E29419F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioIdentification.Proxy", "AudioIdentification.Proxy\AudioIdentification.Proxy.csproj", "{6925B1B5-9D56-474C-9DE8-F2F91C00AC8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioIdentification.Proxy.UnitTests", "AudioIdentification.Proxy.UnitTests\AudioIdentification.Proxy.UnitTests.csproj", "{F7F3F1F5-E7E2-4E15-A7F3-73BCE9DFD766}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -140,6 +144,26 @@ Global
 		{A8568449-6B41-452A-8AB0-40EE6E29419F}.Release|x86.ActiveCfg = Release|x86
 		{A8568449-6B41-452A-8AB0-40EE6E29419F}.Release|x86.Build.0 = Release|x86
 		{A8568449-6B41-452A-8AB0-40EE6E29419F}.Release|x86.Deploy.0 = Release|x86
+		{6925B1B5-9D56-474C-9DE8-F2F91C00AC8F}.Debug|x64.ActiveCfg = Debug|x64
+		{6925B1B5-9D56-474C-9DE8-F2F91C00AC8F}.Debug|x64.Build.0 = Debug|x64
+		{6925B1B5-9D56-474C-9DE8-F2F91C00AC8F}.Debug|x86.ActiveCfg = Debug|x86
+		{6925B1B5-9D56-474C-9DE8-F2F91C00AC8F}.Debug|x86.Build.0 = Debug|x86
+		{6925B1B5-9D56-474C-9DE8-F2F91C00AC8F}.Release|x64.ActiveCfg = Release|x64
+		{6925B1B5-9D56-474C-9DE8-F2F91C00AC8F}.Release|x64.Build.0 = Release|x64
+		{6925B1B5-9D56-474C-9DE8-F2F91C00AC8F}.Release|x86.ActiveCfg = Release|x86
+		{6925B1B5-9D56-474C-9DE8-F2F91C00AC8F}.Release|x86.Build.0 = Release|x86
+		{F7F3F1F5-E7E2-4E15-A7F3-73BCE9DFD766}.Debug|x64.ActiveCfg = Debug|x64
+		{F7F3F1F5-E7E2-4E15-A7F3-73BCE9DFD766}.Debug|x64.Build.0 = Debug|x64
+		{F7F3F1F5-E7E2-4E15-A7F3-73BCE9DFD766}.Debug|x64.Deploy.0 = Debug|x64
+		{F7F3F1F5-E7E2-4E15-A7F3-73BCE9DFD766}.Debug|x86.ActiveCfg = Debug|x86
+		{F7F3F1F5-E7E2-4E15-A7F3-73BCE9DFD766}.Debug|x86.Build.0 = Debug|x86
+		{F7F3F1F5-E7E2-4E15-A7F3-73BCE9DFD766}.Debug|x86.Deploy.0 = Debug|x86
+		{F7F3F1F5-E7E2-4E15-A7F3-73BCE9DFD766}.Release|x64.ActiveCfg = Release|x64
+		{F7F3F1F5-E7E2-4E15-A7F3-73BCE9DFD766}.Release|x64.Build.0 = Release|x64
+		{F7F3F1F5-E7E2-4E15-A7F3-73BCE9DFD766}.Release|x64.Deploy.0 = Release|x64
+		{F7F3F1F5-E7E2-4E15-A7F3-73BCE9DFD766}.Release|x86.ActiveCfg = Release|x86
+		{F7F3F1F5-E7E2-4E15-A7F3-73BCE9DFD766}.Release|x86.Build.0 = Release|x86
+		{F7F3F1F5-E7E2-4E15-A7F3-73BCE9DFD766}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

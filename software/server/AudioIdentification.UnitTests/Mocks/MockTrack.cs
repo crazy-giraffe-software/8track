@@ -4,7 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 // </copyright>
 //-----------------------------------------------------------------------
-namespace CrazyGiraffe.AudioIdentification.UnitTests
+namespace CrazyGiraffe.AudioIdentification.UnitTests.Mocks
 {
     using System;
     using CrazyGiraffe.AudioIdentification;
@@ -79,16 +79,21 @@ namespace CrazyGiraffe.AudioIdentification.UnitTests
         public static IReadOnlyTrack CreateRandom()
         {
             Random random = new Random();
-            MockTrack track = new MockTrack();
-            track.Title = Guid.NewGuid().ToString();
-            track.Artist = Guid.NewGuid().ToString();
-            track.Album = Guid.NewGuid().ToString();
-            track.Genre = Guid.NewGuid().ToString();
-            track.CovertArtImage = GetTestJpgUri();
-            track.MatchConfidence = Guid.NewGuid().ToString();
-            track.Duration = random.Next(100000);
-            track.MatchPosition = random.Next(track.Duration);
-            track.CurrentPosition = random.Next(track.Duration);
+            int duration = random.Next(100000);
+
+            MockTrack track = new MockTrack
+            {
+                Title = Guid.NewGuid().ToString(),
+                Artist = Guid.NewGuid().ToString(),
+                Album = Guid.NewGuid().ToString(),
+                Genre = Guid.NewGuid().ToString(),
+                CovertArtImage = GetTestJpgUri(),
+                MatchConfidence = Guid.NewGuid().ToString(),
+                Duration = duration,
+                MatchPosition = random.Next(duration),
+                CurrentPosition = random.Next(duration),
+            };
+
             return track;
         }
 
