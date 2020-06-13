@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (c) CrazyGiraffeSoftware.net. All rights reserved.  -->
+<!--  Licensed under the MIT license. See LICENSE file in the project root for full license information.  -->
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(SolutionDir)8Track.CSharp.Config.props" />
+  <PropertyGroup>
+    <ProjectGuid>{7FB7A30F-F460-450F-896D-32282A10B187}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CrazyGiraffe.AudioCapture</RootNamespace>
+    <AssemblyName>CrazyGiraffe.AudioCapture</AssemblyName>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)8Track.CSharp.Common.props" />
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\IAudioCapturePlugin.cs" />
+    <Compile Include="Models\AudioCaptureState.cs" />
+    <Compile Include="Models\AudioDevice.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\AudioCapture.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\IAudioCapturePipeline.cs" />
+    <Compile Include="Models\AudioCapturePipeline.cs" />
+  </ItemGroup>
+  <Import Project="$(SolutionDir)8Track.CSharp.Packages.props" />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.8</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+</Project>

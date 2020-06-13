@@ -479,7 +479,7 @@ namespace CrazyGiraffe.AudioIdentification.ACRCloud.UnitTests
             /// </summary>
             public HttpResponseMessage Response { get; set; }
 
-            /// <inheritdocs />
+            /// <inheritdoc />
             public IAsyncOperationWithProgress<HttpResponseMessage, HttpProgress> SendRequestAsync(HttpRequestMessage request)
             {
                 this.Request = request;
@@ -499,7 +499,7 @@ namespace CrazyGiraffe.AudioIdentification.ACRCloud.UnitTests
                 });
             }
 
-            /// <inheritdocs />
+            /// <inheritdoc />
             public void Dispose()
             {
             }
